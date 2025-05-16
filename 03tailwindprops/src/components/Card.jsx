@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({username,btnText}) {
+function Card({username,btnText="Visit Me"}) {
     
     
   return (
@@ -21,7 +21,7 @@ function Card({username,btnText}) {
   </div>
   <div>
     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
-      {btnText || "Visit Here"}
+      {btnText}
     </button>
   </div>
 </div>
