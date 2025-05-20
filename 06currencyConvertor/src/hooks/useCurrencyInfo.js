@@ -40,6 +40,8 @@ export default function useCurrencyInfo(currency) {
       .catch(err => console.error('Currency fetch failed:', err));
   }, [currency]);
 
+  console.log('Currency data:', data);
+
   // 3) Now data is defined here
   return data;
 }
