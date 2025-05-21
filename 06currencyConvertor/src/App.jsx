@@ -25,7 +25,9 @@ function App() {
 
   return (
     <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-    style={{backgroundImage: `url('https://images.pexels.com/photos/28165814/pexels-photo-28165814/free-photo-of-a-close-up-of-a-stock-chart.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`}}
+    //style={{backgroundImage: `url('https://images.pexels.com/photos/28165814/pexels-photo-28165814/free-photo-of-a-close-up-of-a-stock-chart.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`}}
+        style={{backgroundImage: `url('https://cdn.pixabay.com/photo/2023/06/03/15/01/finance-8037840_960_720.jpg')`}}
+
     >
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5
