@@ -9,7 +9,7 @@ todos:[
     },
 ],
 addTodo: (todo) => {},
-updatedTodo: (id, todo) => {},
+updateTodo: (id, todo) => {},
 deleteTodo: (id) => {},
 toggleComplete: (id) => {},
 })
