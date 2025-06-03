@@ -30,7 +30,7 @@ function App() {
       <div className= ' w-full block'>
         <Header />
         <main>
-         TODO: <Outled /> 
+         TODO: <Outled />  
         </main>
         <Footer />
       </div>
