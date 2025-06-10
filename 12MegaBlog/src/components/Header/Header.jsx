@@ -52,7 +52,13 @@ function Header() {
                 >{item.name}</button>
               </li>
 
-            ) : null )}
+            ) : null 
+            )}
+            {authStatus && (
+              <li>
+                <LogoutBtn />
+              </li>
+            ) }
           </ul>
 
         </nav>
