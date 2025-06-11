@@ -1,36 +1,36 @@
 import React, {useCallback}from 'react'
-import { set, useForm } from 'react-hook-form'
+import {  useForm } from 'react-hook-form'
 import {Button , Input , Select , RTE} from '../index'
 import appwriteService from "../../appwrite/config"
 import { useNavigate } from 'react-router-dom'
 import  { useSelector } from 'react-redux'
 
 export default function PostForm({post}) {
-    const  {register ,handeleSubmit , watch , setValue, control, getValues} = useForm({
+    const  {register ,handleSubmit , watch , setValue, control, getValues} = useForm({
         defaultValues: {
-            title: post?.title || '',
-            slug : post?.slug || '',
-            content : post?.content || '',
-            status : post?.status || 'active',
+            title: post?.title || "",
+            slug : post?.$id || "",
+            content : post?.content || "",
+            status : post?.status || "active",
 
            
         },
     })
     const navigate = useNavigate()
-    const userData = useSelector((state) => state.user.userData)
+    const userData = useSelector((state) => state.auth.userData)
 
     const submit = async (data) => {
         if (post) {
-            data.image[0] ? appwriteService.uploadFile(data.image[0]) : null
+            const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null
             if (file){
-                appwriteService.deleteFile(post.featuredimage)
+                appwriteService.deleteFile(post.featuredImage)
             }
 
             const dbPost = await appwriteService.updatePost(
                 post.$id,
                 {
                     ...data,
-                    featuredimage: file ? file.$id : undefined,
+                    featuredImage: file ? file.$id : undefined,
                 })
 
                     if (dbPost) {
@@ -40,7 +40,7 @@ export default function PostForm({post}) {
             const file = await appwriteService.uploadFile(data.image[0]);
             if (file) {
                 const fileId = file.$id
-                data.featuredimage = fileId
+                data.featuredImage = fileId
                 const dbPost = await appwriteService.createPost({
                     ...data,
                     userId: userData.$id,
@@ -68,9 +68,9 @@ export default function PostForm({post}) {
     React.useEffect(() => {
         const subscription = watch((value, {name}) => {
             if (name === 'title') {
-                setValue('slug', slugTransform(value.title,
+                setValue('slug', slugTransform(value.title),
                     {shouldValidate : true}
-                ))
+                );
             }
         })
 
