@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { use, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [ 
     { name: "Home", href: "#hero" },
@@ -25,11 +25,12 @@ export const Navbar = () => {
     )} >
 
         <div className="container flex items-center justify-between"> 
-            <a>
-                <span>
-                    <span> Amritesh </span> Portfolio
+            <a className="text-xl font-bold text-primary flex items-center">
+                <span className="relative z-10">
+                    <span className="text-glow text-foreground"> Amritesh </span> Portfolio
                 </span>
             </a>
+            
 
         </div>
 
