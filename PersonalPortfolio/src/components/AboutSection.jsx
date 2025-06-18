@@ -42,6 +42,12 @@ export const AboutSection = () => {
                             <div className="p-3 rounded-full bg-primary/10">
                             <Code className="h-6 w-6 text-primary" />
                             </div>
+                            <div className="text-left">
+                                <h4 className="text-lg font-semibold">Web Development</h4>
+                                <p className="text-muted-foreground">
+                                    Crafting responsive and dynamic web applications with modern technologies.
+                                </p>
+                            </div>
 
                         </div>
                     </div>
@@ -50,6 +56,12 @@ export const AboutSection = () => {
                             <div className="p-3 rounded-full bg-primary/10">
                             <User className="h-6 w-6 text-primary" />
                             </div>
+                            <div className="text-left">
+                                <h4 className="text-lg font-semibold">Web Development</h4>
+                                <p className="text-muted-foreground">
+                                    Crafting responsive and dynamic web applications with modern technologies.
+                                </p>
+                            </div>
 
                         </div>
                     </div>
@@ -57,6 +69,12 @@ export const AboutSection = () => {
                         <div className="flex items-start gap-4">
                             <div className="p-3 rounded-full bg-primary/10">
                             <Briefcase className="h-6 w-6 text-primary" />
+                            </div>
+                            <div className="text-left">
+                                <h4 className="text-lg font-semibold">Web Development</h4>
+                                <p className="text-muted-foreground">
+                                    Crafting responsive and dynamic web applications with modern technologies.
+                                </p>
                             </div>
 
                         </div>
